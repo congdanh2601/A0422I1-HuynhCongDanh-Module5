@@ -1,0 +1,21 @@
+<div class="w3-col colorthird1" style="text-align:center;">
+  <h3>Pick a Color:</h3>
+  <div style="margin:auto;width:236px;">
+    <div id="html5DIV">
+<!--      <input type="color" #color (change)="changeColor(color.value)" style="width:85%;">-->
+      <input type="color" [(ngModel)]="selectedColor" style="width:85%; height: 50px">
+      <br>
+      <br><br>
+      <br><br>
+      <br><br>
+      <br><br>
+      <br><br>
+      <br><br>
+      <br><br>
+      <br><br>
+      <br>
+      <h3>Selected Color:</h3>
+      <p [style.backgroundColor]="selectedColor" [style.color]="selectedColor" style="height: 100px">hi</p>
+    </div>
+  </div>
+</div>

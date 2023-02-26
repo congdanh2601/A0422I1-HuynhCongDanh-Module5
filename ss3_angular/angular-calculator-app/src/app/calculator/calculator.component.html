@@ -1,0 +1,35 @@
+<h1>Calculator Design Using HTML Layout</h1>
+<div class="container">
+  <div class="header">Calculator</div>
+  <input type="text" class="result" [value]="screen">
+  <div class="second-row">
+    <input type="button" name="" value="7" class="global" (click)="clickNumber('7')">
+    <input type="button" name="" value="8" class="global" (click)="clickNumber('8')">
+    <input type="button" name="" value="9" class="global" (click)="clickNumber('9')">
+    <input type="button" name="" value="/" class="global" (click)="clickOperator('/')">
+  </div>
+  <div class="third-row">
+    <input type="button" name="" value="4" class="global" (click)="clickNumber('4')">
+    <input type="button" name="" value="5" class="global" (click)="clickNumber('5')">
+    <input type="button" name="" value="6" class="global" (click)="clickNumber('6')">
+    <input type="button" name="" value="X" class="global" (click)="clickOperator('*')">
+  </div>
+  <div class="fourth-row">
+    <input type="button" name="" value="1" class="global" (click)="clickNumber('1')">
+    <input type="button" name="" value="2" class="global" (click)="clickNumber('2')">
+    <input type="button" name="" value="3" class="global" (click)="clickNumber('3')">
+    <input type="button" name="" value="-" class="global" (click)="clickOperator('-')">
+  </div>
+  <div class="conflict">
+    <div class="left">
+      <input type="button" name="" value="0" class=" big" (click)="clickNumber('0')">
+      <input type="button" name="" value="." class=" small" (click)="clickNumber('.')">
+      <input type="button" name="" value="AC" class=" red small white-text top-margin" (click)="delete()">
+      <input type="button" name="" value="=" class=" green white-text big top-margin" (click)="clickOperator('=')">
+    </div>
+    <div class="right">
+      <input type="button" name="" value="+" class="global grey plus" (click)="clickOperator('+')">
+    </div>
+  </div>
+</div>
+
