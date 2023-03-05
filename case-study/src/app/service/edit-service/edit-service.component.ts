@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Facility} from "../facility";
 
 @Component({
   selector: 'app-edit-service',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit-service.component.css']
 })
 export class EditServiceComponent implements OnInit {
+  @Input() service: Facility;
 
   constructor() { }
 

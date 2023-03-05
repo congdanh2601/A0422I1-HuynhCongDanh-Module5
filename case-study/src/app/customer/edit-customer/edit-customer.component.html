@@ -1,14 +1,14 @@
 <form>
   <div class="mb-3">
     <label for="name" class="form-label">Tên Khách hàng</label>
-    <input type="text" class="form-control" id="name" aria-describedby="Tên Khách hàng" value="Huỳnh Công Danh">
+    <input type="text" class="form-control" id="name" aria-describedby="Tên Khách hàng" [value]="customer.name">
   </div>
   <div class="mb-3">
     <label for="gender" class="form-label">Giới tính</label>
-    <input type="text" class="form-control" id="gender" aria-describedby="Giới tính" value="Nam">
+    <input type="text" class="form-control" id="gender" aria-describedby="Giới tính" [value]="customer.gender ? 'Nam' : 'Nữ'">
   </div>
   <div class="mb-3">
     <label for="birthday" class="form-label">Ngày sinh</label>
-    <input type="text" class="form-control" id="birthday" value="26/01/1996">
+    <input type="text" class="form-control" id="birthday" [value]="customer.birthday">
   </div>
 </form>

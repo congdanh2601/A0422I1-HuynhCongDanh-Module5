@@ -1,14 +1,14 @@
 <form>
   <div class="mb-3">
-    <label for="name" class="form-label">Tên sản phẩm</label>
-    <input type="text" class="form-control" id="name" aria-describedby="Tên sản phẩm" value="iPhone 14 Pro Max 128GB | Chính hãng VN/A">
+    <label for="name" class="form-label">Tên Dịch vụ</label>
+    <input type="text" class="form-control" id="name" aria-describedby="Tên Dịch vụ" [value]="service.name">
   </div>
   <div class="mb-3">
     <label for="photo" class="form-label">Link hình minh họa</label>
-    <input type="text" class="form-control" id="photo" aria-describedby="Link hình minh họa" value="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/t/_/t_m_18.png">
+    <input type="text" class="form-control" id="photo" aria-describedby="Link hình minh họa" [value]="service.photo">
   </div>
   <div class="mb-3">
-    <label for="price" class="form-label">Giá sản phẩm</label>
-    <input type="text" class="form-control" id="price" value="28.190.000 ₫">
+    <label for="price" class="form-label">Giá Dịch vụ</label>
+    <input type="text" class="form-control" id="price" [value]="service.price">
   </div>
 </form>

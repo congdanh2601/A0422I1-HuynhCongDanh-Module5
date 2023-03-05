@@ -10,7 +10,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <app-edit-customer></app-edit-customer>
+        <app-edit-customer [customer]="selectedCustomer"></app-edit-customer>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
@@ -89,36 +89,33 @@
         <thead class="thead-dark">
         <tr>
           <th>STT</th>
-<!--          <th>Mã KH</th>-->
-<!--          <th>Customer Type</th>-->
+          <th>Loại KH</th>
           <th>Tên KH</th>
-          <th>Giới tính</th>
           <th>Ngày sinh</th>
-<!--          <th>Id card</th>-->
-<!--          <th>Số điện thoại</th>-->
-<!--          <th>Email</th>-->
-<!--          <th>Address</th>-->
+          <th>Giới tính</th>
+          <th>CMND/CCCD</th>
+          <th>Số điện thoại</th>
+          <th>Email</th>
+          <th>Địa chỉ</th>
           <th style="text-align: center">Hành động</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-          <td>1</td>
-<!--          <td th:text="*{customerId}"></td>-->
-<!--          <td th:text="*{customerType.customerTypeName}"></td>-->
-          <td>Huỳnh Công Danh</td>
-          <td>Nam</td>
-          <td>26/01/1996</td>
-<!--          <td th:text="*{customerIdCard}"></td>-->
-<!--          <td th:text="*{customerPhone}"></td>-->
-<!--          <td th:text="*{customerEmail}"></td>-->
-<!--          <td th:text="*{customerAddress}"></td>-->
+        <tr *ngFor="let customer of customers, index as i">
+          <td>{{i+1}}</td>
+          <td>{{customer.customerType}}</td>
+          <td>{{customer.name}}</td>
+          <td>{{customer.birthday}}</td>
+          <td>{{customer.gender ? 'Nam' : 'Nữ'}}</td>
+          <td>{{customer.idNumber}}</td>
+          <td>{{customer.phone}}</td>
+          <td>{{customer.email}}</td>
+          <td>{{customer.address}}</td>
           <td class="px-4">
             <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-              <a href="/customer/edit">
-                <button type="button" class="btn btn-sm btn-primary mx-1">Sửa</button>
-              </a>
-              <button class="btn btn-sm btn-danger mx-1" data-bs-toggle="modal">Xóa</button>
+              <button type="button" class="btn btn-sm btn-primary mx-1" data-toggle="modal" data-target="#editModal"
+                      (click)="selectCustomer(customer)">Sửa</button>
+              <button class="btn btn-sm btn-danger mx-1" data-toggle="modal" data-target="#deleteModal">Xóa</button>
             </div>
           </td>
         </tr>

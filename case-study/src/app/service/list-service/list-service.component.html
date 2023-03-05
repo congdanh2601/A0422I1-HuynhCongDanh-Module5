@@ -4,13 +4,13 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="editModalLabel">Cập nhật sản phẩm</h5>
+        <h5 class="modal-title" id="editModalLabel">Cập nhật Dịch vụ</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <app-edit-service></app-edit-service>
+        <app-edit-service [service]="selectedService"></app-edit-service>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
@@ -26,7 +26,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="createModalLabel">Thêm sản phẩm mới</h5>
+        <h5 class="modal-title" id="createModalLabel">Thêm Dịch vụ mới</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -68,18 +68,17 @@
   <div class="table-title my-2">
     <div class="row">
       <div class="col-5">
-        <h2>Danh sách <b>Sản phẩm</b></h2>
+        <h2>Danh sách <b>Dịch vụ</b></h2>
       </div>
       <div class="col-4">
         <form class="d-flex" style="padding-top: 5px" action="/service/search">
           <input class="form-control me-2" type="search" name="name"
-                 placeholder="Nhập sản phẩm" aria-label="Search">
-          <button class="btn btn-success" type="submit" style="width: 200px; margin-left: 15px">Tìm kiếm</button>
+                 placeholder="Tìm kiếm Dịch vụ" aria-label="Search">
+          <button class="btn btn-success" type="submit" style="margin-left: 15px">Tìm</button>
         </form>
       </div>
       <div class="col-3" style="padding-top: 5px">
-<!--        <a href="/customer/add" class="btn btn-primary" data-toggle="modal">Thêm Khách hàng mới</a>-->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createModal">Thêm sản phẩm mới</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createModal">Thêm Dịch vụ mới</button>
       </div>
     </div>
   </div>
@@ -88,42 +87,42 @@
 <div class="row justify-content-center d-flex">
   <div class="col-9 justify-content-center d-flex" id="main">
     <!--    Card 1-->
-    <div class="card" style="width: 18rem; margin: 10px 15px">
-      <img src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/t/_/t_m_18.png" class="card-img-top" alt="...">
+    <div class="card" style="width: 18rem; margin: 10px 15px" *ngFor="let service of services">
+      <img [src]="service.photo" class="card-img-top" alt="..." height="200px">
       <div class="card-body">
-        <h5 class="card-title">iPhone 14 Pro Max 128GB | Chính hãng VN/A</h5>
-        <p class="card-text" style="color: red; font-weight: bold">28.190.000 ₫</p>
+        <h5 class="card-title">{{service.name}}</h5>
+        <p class="card-text" style="color: red; font-weight: bold">{{service.price}}</p>
         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#editModal"
-                style="margin-right: 10px">Sửa</button>
+                style="margin-right: 10px" (click)="selectService(service)">Sửa</button>
         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Xóa</button>
       </div>
     </div>
 
     <!--    Card 2-->
-    <div class="card" style="width: 18rem; margin: 10px 15px">
-      <img src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/1/4/14_1_9_2_9.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">iPhone 13 128GB | Chính hãng VN/A</h5>
-        <p class="card-text" style="color: red; font-weight: bold">17.990.000 ₫</p>
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#editModal"
-                style="margin-right: 10px">Sửa
-        </button>
-        <button href="#" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Xóa</button>
-      </div>
-    </div>
+<!--    <div class="card" style="width: 18rem; margin: 10px 15px">-->
+<!--      <img src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/1/4/14_1_9_2_9.jpg" class="card-img-top" alt="...">-->
+<!--      <div class="card-body">-->
+<!--        <h5 class="card-title">iPhone 13 128GB | Chính hãng VN/A</h5>-->
+<!--        <p class="card-text" style="color: red; font-weight: bold">17.990.000 ₫</p>-->
+<!--        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#editModal"-->
+<!--                style="margin-right: 10px">Sửa-->
+<!--        </button>-->
+<!--        <button href="#" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Xóa</button>-->
+<!--      </div>-->
+<!--    </div>-->
 
     <!--    Card 3-->
-    <div class="card" style="width: 18rem; margin: 10px 15px">
-      <img src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/8/0/800x800-640x640-5.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Xiaomi Redmi Note 11 128GB</h5>
-        <p class="card-text" style="color: red; font-weight: bold">4.250.000 ₫</p>
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#editModal"
-                style="margin-right: 10px">Sửa
-        </button>
-        <button href="#" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Xóa</button>
-      </div>
-    </div>
+<!--    <div class="card" style="width: 18rem; margin: 10px 15px">-->
+<!--      <img src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/8/0/800x800-640x640-5.png" class="card-img-top" alt="...">-->
+<!--      <div class="card-body">-->
+<!--        <h5 class="card-title">Xiaomi Redmi Note 11 128GB</h5>-->
+<!--        <p class="card-text" style="color: red; font-weight: bold">4.250.000 ₫</p>-->
+<!--        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#editModal"-->
+<!--                style="margin-right: 10px">Sửa-->
+<!--        </button>-->
+<!--        <button href="#" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Xóa</button>-->
+<!--      </div>-->
+<!--    </div>-->
   </div>
 </div>
 <div class="justify-content-center d-flex">
