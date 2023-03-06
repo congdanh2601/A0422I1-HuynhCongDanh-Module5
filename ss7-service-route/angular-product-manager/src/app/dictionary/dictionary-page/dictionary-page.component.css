@@ -1,0 +1,12 @@
+th, td {
+  border: solid black 1px;
+  width: 150px;
+}
+
+tr{
+  height: 30px;
+}
+
+*{
+  padding: 10px;
+}

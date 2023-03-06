@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {FacilityService} from "./service/facility-service";
 
 @Component({
   selector: 'app-root',
@@ -7,5 +6,5 @@ import {FacilityService} from "./service/facility-service";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'case-study';
+  title = 'angular-product-manager';
 }

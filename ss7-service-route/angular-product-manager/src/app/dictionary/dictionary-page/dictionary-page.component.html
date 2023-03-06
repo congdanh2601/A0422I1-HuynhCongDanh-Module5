@@ -1,0 +1,12 @@
+<table style="border-collapse: collapse">
+  <tr>
+    <th>Từ</th>
+<!--    <th>Nghĩa</th>-->
+    <th>Chi tiết</th>
+  </tr>
+<tr *ngFor="let word of words">
+  <td>{{word.word}}</td>
+<!--  <td>{{word.mean}}</td>-->
+  <td><button [routerLink]="['detail', word.word]">Dịch</button></td>
+</tr>
+</table>
