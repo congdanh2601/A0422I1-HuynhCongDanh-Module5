@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {DictionaryPageComponent} from "./dictionary/dictionary-page/dictionary-page.component";
 import {DictionaryDetailComponent} from "./dictionary/dictionary-detail/dictionary-detail.component";
-import {ListProductComponent} from "./product_manager/list-product/list-product.component";
-import {CreateProductComponent} from "./product_manager/create-product/create-product.component";
-import {EditProductComponent} from "./product_manager/edit-product/edit-product.component";
+import {ListProductComponent} from "./product_manager/product/list-product/list-product.component";
+import {CreateProductComponent} from "./product_manager/product/create-product/create-product.component";
+import {EditProductComponent} from "./product_manager/product/edit-product/edit-product.component";
 
 
 const routes: Routes = [
@@ -17,16 +17,16 @@ const routes: Routes = [
     component: DictionaryDetailComponent
   },
   {
-    path: 'product/list',
-    component: ListProductComponent
+    path: 'product',
+    loadChildren: () => import('./product_manager/product/product.module').then(module => module.ProductModule)
   },
   {
-    path: 'product/create',
-    component: CreateProductComponent
+    path: 'category',
+    loadChildren: () => import('./product_manager/category/category.module').then(module => module.CategoryModule)
   },
   {
-    path: 'product/edit/:id',
-    component: EditProductComponent
+    path: 'img-slider',
+    loadChildren: () => import('./img-slider/img-slider.module').then(module => module.ImgSliderModule)
   }
 ];
 

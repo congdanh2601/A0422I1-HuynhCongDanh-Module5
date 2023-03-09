@@ -19,9 +19,7 @@ export class EditProductComponent implements OnInit {
     this.activatedRoute.paramMap.subscribe(next => {
       const id = next.get('id');
       if (id != null) {
-        console.log(id);
         this.product = this.productService.findById(parseInt(id));
-        console.log(this.product)
       }
     }, error => {
 
@@ -40,7 +38,6 @@ export class EditProductComponent implements OnInit {
   }
 
   update() {
-    console.log(this.product);
     this.product = this.productForm.value;
     this.productService.updateProduct(this.product);
     this.router.navigate(['product/list']);
