@@ -34,7 +34,7 @@ export class EditCategoryComponent implements OnInit {
     return this.categoryService.findByIdFromHttp(id);
   }
 
-  updateCategory(id: number) {
+  updateCategory(id) {
     const category = this.categoryForm.value;
     this.categoryService.updateCategory(id, category);
     alert('Cập nhật thành công');

@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HackernewsModule} from "./hackernews/hackernews.module";
 import {CountdownTimerModule} from "./countdown-timer/countdown-timer.module";
+import {SignupFormModule} from "./signup-form/signup-form.module";
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import {CountdownTimerModule} from "./countdown-timer/countdown-timer.module";
     BrowserModule,
     AppRoutingModule,
     HackernewsModule,
-    CountdownTimerModule
+    CountdownTimerModule,
+    SignupFormModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,83 @@
+<h1>Đăng ký tài khoản</h1>
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <table>
+    <tr>
+      <td><label for="email">Email:</label></td>
+      <td><input id="email" type="text" formControlName="email"></td>
+      <td>
+        <p *ngIf="form.controls.email.hasError('required') && form.controls.email.touched">Email không được để trống</p>
+        <p *ngIf="form.controls.email.hasError('email') && form.controls.email.touched">Email sai định dạng</p>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="password">Mật khẩu:</label></td>
+      <td><input id="password" type="password" formControlName="password"></td>
+      <td>
+        <p *ngIf="form.controls.password.hasError('required') && form.controls.password.touched">Mật khẩu không được để
+          trống</p>
+        <p *ngIf="form.controls.password.hasError('minlength') && form.controls.password.touched">Mật khẩu không được
+          ngắn hơn 6 ký tự</p>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="confirmPassword">Xác nhận mật khẩu:</label></td>
+      <td><input id="confirmPassword" type="password" formControlName="confirmPassword"></td>
+      <td>
+        <p *ngIf="form.controls.confirmPassword.hasError('required') && form.controls.confirmPassword.touched">Mật khẩu
+          không được để trống</p>
+        <p *ngIf="form.controls.confirmPassword.hasError('minlength') && form.controls.confirmPassword.touched">Mật khẩu
+          không được ngắn hơn 6 ký tự</p>
+        <p *ngIf="form.hasError('passwordNotMatch') && form.controls.confirmPassword.touched">Mật khẩu chưa trùng
+          khớp</p>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="country">Quốc gia:</label></td>
+      <td>
+        <select id="country" formControlName="country">
+          <option value="">Chọn 1 quốc gia</option>
+          <option value="Việt Nam">Việt Nam</option>
+          <option value="Nhật Bản">Nhật Bản</option>
+          <option value="Hàn Quốc">Hàn Quốc</option>
+        </select>
+      </td>
+      <td>
+        <p *ngIf="form.controls.country.hasError('required') && form.controls.country.touched">Phải chọn 1 quốc gia</p>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="age">Tuổi:</label></td>
+      <td><input id="age" type="text" formControlName="age"></td>
+      <td>
+        <p *ngIf="form.controls.age.hasError('required') && form.controls.age.touched">Tuổi không được để trống</p>
+        <p *ngIf="form.controls.age.hasError('min') && form.controls.age.touched">Tuổi phải lớn hơn 18</p>
+      </td>
+    </tr>
+    <tr>
+      <td>Giới tính:</td>
+      <td>
+        <input type="radio" id="male" formControlName="gender" value="Nam">
+        <label for="male">Nam</label>
+        <input type="radio" id="female" formControlName="gender" value="Nữ">
+        <label for="female">Nữ</label>
+      </td>
+      <td>
+        <p *ngIf="form.controls.gender.hasError('required') && form.controls.gender.touched">Giới tính không được để trống</p>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="phone">Số điện thoại:</label></td>
+      <td><input id="phone" type="text" formControlName="phone"></td>
+      <td>
+        <p *ngIf="form.controls.phone.hasError('required') && form.controls.phone.touched">Số điện thoại không được để trống</p>
+        <p *ngIf="form.controls.phone.hasError('pattern') && form.controls.phone.touched">Số điện thoại chưa đúng</p>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button type="submit">Đăng ký</button>
+      </td>
+    </tr>
+  </table>
+</form>

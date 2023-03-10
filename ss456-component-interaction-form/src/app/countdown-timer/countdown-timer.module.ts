@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
+import {CountdownTimerRoutingModule} from "./countdown-timer/countdown-timer-routing.module";
 
 
 
@@ -10,7 +11,8 @@ import { CountdownTimerComponent } from './countdown-timer/countdown-timer.compo
     CountdownTimerComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    CountdownTimerRoutingModule
   ]
 })
 export class CountdownTimerModule { }
