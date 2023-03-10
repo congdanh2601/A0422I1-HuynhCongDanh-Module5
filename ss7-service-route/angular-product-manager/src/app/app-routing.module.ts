@@ -5,11 +5,11 @@ import {DictionaryDetailComponent} from "./dictionary/dictionary-detail/dictiona
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'dictionary',
     component: DictionaryPageComponent
   },
   {
-    path: 'detail/:word',
+    path: 'dictionary/detail/:word',
     component: DictionaryDetailComponent
   },
   {
