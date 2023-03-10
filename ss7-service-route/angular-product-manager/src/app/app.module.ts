@@ -8,7 +8,7 @@ import {DictionaryDetailComponent} from './dictionary/dictionary-detail/dictiona
 import {ReactiveFormsModule} from "@angular/forms";
 import {ProductModule} from "./product_manager/product/product.module";
 import {CategoryModule} from "./product_manager/category/category.module";
-
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -21,7 +21,8 @@ import {CategoryModule} from "./product_manager/category/category.module";
     AppRoutingModule,
     ReactiveFormsModule,
     ProductModule,
-    CategoryModule
+    CategoryModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

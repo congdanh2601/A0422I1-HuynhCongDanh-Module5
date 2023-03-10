@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
 import {CategoryService} from "../category.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-create-category',
@@ -13,7 +14,7 @@ export class CreateCategoryComponent implements OnInit {
     name: new FormControl(),
   });
 
-  constructor(private categoryService: CategoryService) {
+  constructor(private categoryService: CategoryService, private router: Router) {
   }
 
   ngOnInit() {
@@ -21,7 +22,8 @@ export class CreateCategoryComponent implements OnInit {
 
   submit() {
     const category = this.categoryForm.value;
-    this.categoryService.saveCategory(category);
+    this.categoryService.saveCategoryToHttp(category);
     this.categoryForm.reset();
+    this.router.navigateByUrl("category/list")
   }
 }

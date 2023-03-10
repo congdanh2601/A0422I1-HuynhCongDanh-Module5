@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88e327f0-730c-4f85-927b-03fa2ee5534c" name="Default Changelist" comment="" />
+    <list default="true" id="88e327f0-730c-4f85-927b-03fa2ee5534c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss7-service-route/angular-product-manager/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ss7-service-route/angular-product-manager/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss7-service-route/angular-product-manager/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ss7-service-route/angular-product-manager/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss7-service-route/angular-product-manager/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../ss7-service-route/angular-product-manager/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss7-service-route/angular-product-manager/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ss7-service-route/angular-product-manager/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss7-service-route/angular-product-manager/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../ss7-service-route/angular-product-manager/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss7-service-route/angular-product-manager/src/app/product_manager/category/category.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../ss7-service-route/angular-product-manager/src/app/product_manager/category/category.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss7-service-route/angular-product-manager/src/app/product_manager/category/create-category/create-category.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../ss7-service-route/angular-product-manager/src/app/product_manager/category/create-category/create-category.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss7-service-route/angular-product-manager/src/app/product_manager/category/edit-category/edit-category.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../ss7-service-route/angular-product-manager/src/app/product_manager/category/edit-category/edit-category.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss7-service-route/angular-product-manager/src/app/product_manager/category/list-category/list-category.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ss7-service-route/angular-product-manager/src/app/product_manager/category/list-category/list-category.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss7-service-route/angular-product-manager/src/app/product_manager/category/list-category/list-category.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../ss7-service-route/angular-product-manager/src/app/product_manager/category/list-category/list-category.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss7-service-route/angular-product-manager/src/app/product_manager/product/list-product/list-product.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ss7-service-route/angular-product-manager/src/app/product_manager/product/list-product/list-product.component.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/prac-change-font-size" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="2Lrgv1PYr6jmfeHrDsxX2g3Wwea" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -20,7 +33,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/prac-change-font-size" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ss456-component-interaction-form" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -33,13 +46,23 @@
       <option name="presentableId" value="Default" />
       <updated>1676634842376</updated>
       <workItem from="1676634849027" duration="623000" />
+      <workItem from="1678418237983" duration="384000" />
+      <workItem from="1678419099292" duration="29000" />
     </task>
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/prac-change-font-size/src/app/font-size-editor/font-size-editor.component.js" />
+      </list>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1676635478878">
+    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1678419125535">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1676635478878" />
+    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1678419125535" />
   </component>
 </project>

@@ -18,11 +18,13 @@ export class ListCategoryComponent implements OnInit {
   }
 
   getAll() {
-    this.categories = this.categoryService.getAll();
+    this.categoryService.getAllFromHttp().subscribe(next => {
+      this.categories = next;
+    });
   }
 
-  delete(id: any) {
-    this.categoryService.deleteCategory(id);
+  delete(id: number) {
+    this.categoryService.deleteCategoryFromHttp(id);
     this.getAll();
   }
 }
