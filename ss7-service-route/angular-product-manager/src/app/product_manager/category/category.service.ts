@@ -6,16 +6,7 @@ import {Observable} from "rxjs";
   providedIn: 'root'
 })
 export class CategoryService {
-  categories: Category[] = [{
-    id: 1,
-    name: 'IPhone'
-  }, {
-    id: 2,
-    name: 'Samsung',
-  }, {
-    id: 3,
-    name: 'LG',
-  }];
+  categories: Category[] = []
 
   constructor(private httpClient: HttpClient) { }
 
@@ -31,8 +22,8 @@ export class CategoryService {
     this.categories.push(category);
   }
 
-  saveCategoryToHttp(category) {
-    this.httpClient.post("http://localhost:3000/categories", category);
+  saveCategoryToHttp(category): Observable<any> {
+    return this.httpClient.post<Category>("http://localhost:3000/categories", category);
   }
 
   findById(id: number) {
@@ -51,8 +42,8 @@ export class CategoryService {
     }
   }
 
-  updateCategoryToHttp(category: Category) {
-    this.httpClient.put("http://localhost:3000/categories"+category.id, category);
+  updateCategoryToHttp(category: Category): Observable<any> {
+    return this.httpClient.put("http://localhost:3000/categories/"+category.id, category);
   }
 
   deleteCategory(id: number) {
@@ -62,6 +53,6 @@ export class CategoryService {
   }
 
   deleteCategoryFromHttp(id: number) {
-    this.httpClient.delete("http://localhost:3000/categories/"+id);
+    return this.httpClient.delete("http://localhost:3000/categories/"+id);
   }
 }

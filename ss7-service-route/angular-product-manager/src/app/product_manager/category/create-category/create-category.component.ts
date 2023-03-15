@@ -22,8 +22,9 @@ export class CreateCategoryComponent implements OnInit {
 
   submit() {
     const category = this.categoryForm.value;
-    this.categoryService.saveCategoryToHttp(category);
-    this.categoryForm.reset();
-    this.router.navigateByUrl("category/list")
+    this.categoryService.saveCategoryToHttp(category).subscribe(() => {
+      alert('Tạo mới thành công');
+      this.router.navigateByUrl("category/list")
+    });
   }
 }

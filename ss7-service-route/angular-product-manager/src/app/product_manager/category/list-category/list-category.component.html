@@ -9,7 +9,7 @@
   <tr *ngFor="let category of categories; index as i">
     <td>{{i + 1}}</td>
     <td>{{category.name}}</td>
-    <td><button [routerLink]="['/category/edit', category.id]">Sửa</button></td>
+    <td><button [routerLink]="['edit', category.id]">Sửa</button></td>
     <td><button (click)="delete(category.id)">Xóa</button></td>
   </tr>
 </table>

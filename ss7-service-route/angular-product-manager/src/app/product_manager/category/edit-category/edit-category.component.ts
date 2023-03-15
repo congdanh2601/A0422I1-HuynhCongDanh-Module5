@@ -17,27 +17,32 @@ export class EditCategoryComponent implements OnInit {
               private activatedRoute: ActivatedRoute, private router: Router) {
     this.activatedRoute.paramMap.subscribe(next => {
       const id = next.get('id');
-        console.log(id);
-      this.categoryService.findByIdFromHttp(id).subscribe(next => this.category = next);
-      console.log(this.category);
+      this.categoryService.findByIdFromHttp(id).subscribe(next => {
+        this.category = next;
+        this.categoryForm = new FormGroup({
+          id: new FormControl(this.category.id),
+          name: new FormControl(this.category.name)
+        })
+      });
     });
   }
 
   ngOnInit() {
     this.categoryForm = new FormGroup({
-      id: new FormControl(this.category.id),
-      name: new FormControl(this.category.name)
+      id: new FormControl(),
+      name: new FormControl()
     });
   }
 
-  getCategory(id: number) {
+  getCategory(id) {
     return this.categoryService.findByIdFromHttp(id);
   }
 
   updateCategory(id) {
     const category = this.categoryForm.value;
-    this.categoryService.updateCategory(id, category);
-    alert('Cập nhật thành công');
-    this.router.navigateByUrl("category/list");
+    this.categoryService.updateCategoryToHttp(category).subscribe(() => {
+      alert("Cập nhật thành công");
+      this.router.navigateByUrl("category/list");
+    });
   }
 }

@@ -24,7 +24,8 @@ export class ListCategoryComponent implements OnInit {
   }
 
   delete(id: number) {
-    this.categoryService.deleteCategoryFromHttp(id);
-    this.getAll();
+    this.categoryService.deleteCategoryFromHttp(id).subscribe(() => {
+      this.getAll();
+    });
   }
 }
