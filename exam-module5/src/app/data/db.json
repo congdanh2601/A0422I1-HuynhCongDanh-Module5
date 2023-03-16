@@ -1,0 +1,76 @@
+{
+  "products": [
+    {
+      "name": "Sting",
+      "source": "Việt Nam",
+      "price": 250000,
+      "unit": "Thùng"
+    },
+    {
+      "name": "Tiger",
+      "source": "Việt Nam",
+      "price": 220000,
+      "unit": "Thùng"
+    },
+    {
+      "name": "Oshi",
+      "source": "Việt Nam",
+      "price": 100000,
+      "unit": "Thùng"
+    }
+  ],
+  "categories": [
+    {
+      "id": "LH-0001",
+      "amount": 1,
+      "product": {
+        "name": "Sting",
+        "source": "Việt Nam",
+        "price": 250000,
+        "unit": "Thùng"
+      },
+      "expireDate": "2002-01-01",
+      "importDate": "2001-01-01",
+      "exportDate": "2001-01-01"
+    },
+    {
+      "id": "LH-0008",
+      "amount": 234,
+      "product": {
+        "name": "Oshi",
+        "source": "Việt Nam",
+        "price": 100000,
+        "unit": "Thùng"
+      },
+      "expireDate": "2022-12-14",
+      "importDate": "2022-12-13",
+      "exportDate": "2022-12-12"
+    },
+    {
+      "id": "LH-0010",
+      "amount": 2,
+      "product": {
+        "name": "Tiger",
+        "source": "Việt Nam",
+        "price": 220000,
+        "unit": "Thùng"
+      },
+      "expireDate": "2022-02-04",
+      "importDate": "2022-02-03",
+      "exportDate": "2022-02-02"
+    },
+    {
+      "id": "LH-0002",
+      "amount": 2,
+      "product": {
+        "name": "Tiger",
+        "source": "Việt Nam",
+        "price": 220000,
+        "unit": "Thùng"
+      },
+      "expireDate": "2005-04-04",
+      "importDate": "2001-02-02",
+      "exportDate": "2001-02-01"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+<h1>Nhập hàng mới</h1>
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <p *ngIf="notValid">Các trường chưa hợp lệ. Vui lòng nhập lại</p>
+  <table>
+    <tr>
+      <td><label for="id" class="form-label">Mã lô hàng</label></td>
+      <td><input type="text" class="form-control" id="id" formControlName="id"></td>
+      <td>
+        <p *ngIf="form.controls.id.hasError('required') && form.controls.id.touched">Mã lô hàng không được để
+          trống</p>
+        <p *ngIf="form.controls.id.hasError('pattern') && form.controls.id.touched">Mã lô hàng sai định dạng</p>
+      </td>
+
+    </tr>
+    <tr>
+      <td><label for="product" class="form-label">Sản phẩm</label></td>
+      <td>
+        <select class="form-select" id="product" formControlName="product">
+          <option *ngFor="let product of products" [ngValue]="product">{{product.name}}</option>
+        </select>
+      </td>
+      <td><p *ngIf="form.controls.product.hasError('required') && form.controls.product.touched">Sản phẩm không được để
+        trống</p></td>
+    </tr>
+    <tr>
+      <td><label for="amount" class="form-label">Số lượng</label></td>
+      <td><input type="number" class="form-control" id="amount" formControlName="amount"></td>
+      <td>
+        <p *ngIf="form.controls.amount.hasError('required') && form.controls.amount.touched">Số lượng không được để
+          trống</p>
+        <p *ngIf="form.controls.amount.hasError('min') && form.controls.amount.touched">Số lượng phải là số nguyên
+          dương</p>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="exportDate" class="form-label">Ngày sản xuất</label></td>
+      <td><input type="date" class="form-control" id="exportDate" formControlName="exportDate"></td>
+      <td>
+        <p *ngIf="form.controls.exportDate.hasError('required') && form.controls.exportDate.touched">Ngày sản xuất
+          không được để trống</p>
+        <p *ngIf="form.hasError('invalidDate') && form.controls.exportDate.touched
+      && form.controls.importDate.touched && form.controls.expireDate.touched">Ngày sản xuất phải trước ngày hết hạn và
+          ngày nhập hàng, ngày nhập hàng phải trước ngày hết hạn</p>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="importDate" class="form-label">Ngày nhập hàng</label></td>
+      <td><input type="date" class="form-control" id="importDate" formControlName="importDate"></td>
+      <td><p *ngIf="form.controls.importDate.hasError('required') && form.controls.importDate.touched">Ngày nhập hàng
+        không được để trống</p></td>
+    </tr>
+    <tr>
+      <td><label for="expireDate" class="form-label">Ngày hết hạn</label></td>
+      <td><input type="date" class="form-control" id="expireDate" formControlName="expireDate"></td>
+      <td><p *ngIf="form.controls.expireDate.hasError('required') && form.controls.expireDate.touched">Ngày hết hạn
+        không được để trống</p></td>
+    </tr>
+  </table>
+  <button type="submit" class="btn btn-primary">Nhập hàng</button>
+  <button type="button" class="btn btn-dark" routerLink="/">Quay lại</button>
+</form>
